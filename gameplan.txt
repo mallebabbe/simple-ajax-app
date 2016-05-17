@@ -1,0 +1,8 @@
+make directories and app.js 
+	npm install express , pug , 
+make jadepage and text align center 
+
+make jade
+	in the head: css, js
+	add a div with the images
+

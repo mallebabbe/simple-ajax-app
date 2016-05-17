@@ -1,0 +1,20 @@
+{
+  "name": "sven-book",
+  "version": "1.0.0",
+  "description": "app about books",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "pug": "^2.0.0-alpha7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sven",
+  "license": "MIT"
+}
