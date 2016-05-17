@@ -1,0 +1,23 @@
+[
+	{
+		"title":"Lord of the Rings", 
+		"author":"Tolkien",
+		"desc":"Absolute awesomeness",
+		"thumbnail":"1thumb.jpeg",
+		"cover":"1.jpeg"
+	}, 
+	{
+		"title":"Harry Potter", 
+		"author":"J. K. Rowling",
+		"desc":"Absolute awesomeness",
+		"thumbnail":"2thumb.jpeg",
+		"cover":"2.jpeg"
+	}, 
+	{
+		"title":"Thinking fast and slow", 
+		"author":"Daniel Kahneman",
+		"desc":"Absolute awesomeness",
+		"thumbnail":"3thumb.jpeg",
+		"cover":"3.jpeg"
+	}
+]
