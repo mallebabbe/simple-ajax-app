@@ -7,8 +7,6 @@ var bodyParser = require('body-parser');
 app.set('views', 'src/views');
 app.set('view engine', 'jade');
 
-var jsonREADER = require ( '../my_modules/json-file-reader')
-
 app.use(bodyParser.urlencoded({extended: true}));
 
 // require the resources
@@ -18,13 +16,35 @@ app.use(express.static('./public/images'))
 
 // GET -------QUERY DATA
 app.get('/', (req, res) => {
-	var filename = req.query
 
-	jsonREADER.readJSON('./src/books.json', function (jsonData){
+	fs.readFile('./resources/books.json', (error, data) => {
+		if (error) {
+			throw error
+		} else {
+		var parsedBooks = JSON.parse(data)
+		console.log(parsedBooks)
+		res.render('index', { books: parsedBooks } )
+}
+})
+})
 
-		res.render('index', {
-			
-		})
+app.get( '/api', (req, res) => {
+	var booktitle = req.query.title
+	var bookmatch = {}
+
+	fs.readFile('./resources/books.json', (error, data) => {
+		if (error) {
+			throw error
+		} else {
+			var parsedBooks = JSON.parse(data)
+
+			for (var i = 0; i < parsedBooks.length; i++) {
+				if (parsedBooks[i].title == booktitle) {
+					bookmatch = parsedBooks[i]
+				}
+			}
+			res.send ( bookmatch )
+		}
 	})
 })
 

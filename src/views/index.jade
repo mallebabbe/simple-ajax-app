@@ -6,10 +6,13 @@ html
 		script(src="https://code.jquery.com/jquery-2.2.0.min.js")
 		script(src="script.js")
 	body
+		h1 Welcome to Our Bookstore
 		div.wrapper
 			div.thumbnail-wrapper
-				img.thumbnail(src='1thumb.jpeg')
-				img.thumbnail(src='2thumb.jpeg')
-				img.thumbnail(src='3thumb.jpeg')
-		div.display
-			
+			each book in books
+				img.thumb(src=book.thumbnail, title=book.title)
+		div#display
+			h2#title
+			p#author
+			p#description
+			img#cover
